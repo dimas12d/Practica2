@@ -29,7 +29,7 @@ public class ejemplo {
             XQueryService xqs = (XQueryService) col.getService("XQueryService", "1.0");
             xqs.setProperty("indent", "yes");
 
-            CompiledExpression compiled = xqs.compile("/");
+            CompiledExpression compiled = xqs.compile("/equipos_de_futbol/equipo/ciudad");
             ResourceSet result = xqs.execute(compiled);
             ResourceIterator i = result.getIterator();
             Resource res = null;
